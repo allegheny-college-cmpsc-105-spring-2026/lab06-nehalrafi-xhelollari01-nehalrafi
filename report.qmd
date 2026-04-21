@@ -2,28 +2,34 @@
 title: Report
 ---
 
-TODO: Write your report in this `report.qmd` file using markdown syntax.
+Write your report in this `report.qmd` file using markdown syntax.
 
 ## What this was lab about
+- This lab was about collecting and analyzing data from two different sources: a Google survey and website analytics. The main goal was to understand how real-world data can be gathered and explored using Python. I created a survey to collect information from classmates about their study habits and preferences, and I also connected my website to Google Analytics to track user activity. After gathering the data, I used a Python notebook to load, explore, and visualize patterns in both datasets.
 
-TODO: Briefly summarize what this lab was about and what you did at a high level.
+Briefly summarize what this lab was about and what you did at a high level.
 
 ## Methods
 
-TODO: Briefly talk about the methods you used to gather the data and any specific functions that helped reveal the patterns.
+Briefly talk about the methods you used to gather the data and any specific functions that helped reveal the patterns.
+- To gather survey data, I created a Google Form with questions about class year, study hours per week, favorite subject, and how often students visit academic websites. I shared the form with classmates and collected responses, which were then downloaded as a CSV file and loaded into a pandas dataframe. For the analytics data, I used Google Analytics to track website activity and exported the data as a CSV file. Since the file contained extra metadata at the top, I used the skiprows parameter in pd.read_csv() to correctly load the dataset into a dataframe. To explore the data, I used pandas functions such as head(), shape, and value_counts() to understand the structure and distribution of the data. I also used matplotlib to create visualizations like bar charts and histograms. These helped reveal patterns in the data, such as how responses were distributed across different categories.
 
 ## Findings
 
-TODO: Briefly restate what you found out about your classmates by exploring the data. 
+Briefly restate what you found out about your classmates by exploring the data. 
+- From exploring the survey data, I found that there was a mix of students from different class years who responded to the survey. As shown in Figure 2: Distribution of Class Years in the Survey, some class years had more responses than others, but overall the data included a variety of students. I also observed differences in study habits, as some students reported studying only a few hours per week while others studied significantly more.
 
-TODO: Briefly restate what your found out about your site usage by exploring the Google Analytics Data.
+Briefly restate what your found out about your site usage by exploring the Google Analytics Data.
+- From the Google Analytics data, I found that there was little to no recorded user activity at the time of analysis. This meant that I was not able to generate a meaningful visualization for Figure 1. However, the dataset structure showed that it is capable of tracking metrics such as page views, active users, and engagement time. The lack of data suggests that the website has not yet received enough traffic to produce useful analytics insights.
 
 Please refer to the figures you made in the notebook by title. For example, "As shown in figure 1..."
 
 ## Discussion
 
-TODO: Briefly mention how data gathering can help you answer specific questions.
+Briefly mention how data gathering can help you answer specific questions.
+- This lab shows how data gathering can help answer specific questions about behavior and preferences. Survey data allows us to understand what people report about themselves, such as how much they study or what subjects they like. On the other hand, analytics data can show how users actually interact with a website. When combined, these types of data can provide a more complete understanding of both user opinions and real usage patterns.
 
 ## Future directions
 
-TODO: Briefly state what could be explored within the data in the future, building on what you already did. Your answer must be something that you could actually do with the data, related to this lab.
+Briefly state what could be explored within the data in the future, building on what you already did. Your answer must be something that you could actually do with the data, related to this lab.
+- In the future, this analysis could be improved by collecting more survey responses to make the results more representative of the class. Additional questions could also be added to explore more detailed aspects of student behavior, such as study environments or preferred learning methods. For the analytics data, more time and increased website traffic would allow for deeper analysis, such as identifying the most visited pages and understanding user engagement trends over time.
